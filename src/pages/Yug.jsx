@@ -112,7 +112,7 @@ const Yug = () => {
       style={{ minHeight: `${totalStages * 100}vh` }}
     >
       {/* Yug Sections */}
-      <div className="flex w-full h-full relative">
+      <div id="yug-marker" className="flex w-full h-full relative">
         <div className="w-full">
           {yugImages.map((image, index) => (
             <div

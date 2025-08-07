@@ -13,3 +13,29 @@
 .animate-pulseGlow {
   animation: pulseGlow 2s ease-in-out infinite;
 }
+
+.contact-gradient-button {
+  background-color: white;
+  transition: background 0.4s ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out;
+  border: 1px solid white;
+}
+
+.contact-gradient-button:hover {
+  background: linear-gradient(to right, #f97316, #dc2626); /* orange to red */
+  color: white;
+  border: 1px solid transparent;
+}
+
+/* ✅ App.css — use this version */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 3px #e2c18a, 0 0 6px #e29d8a;
+  }
+  50% {
+    text-shadow: 0 0 6px #e2c18a, 0 0 12px #e2968a;
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
