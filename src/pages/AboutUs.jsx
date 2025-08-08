@@ -4,22 +4,22 @@ import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const people = [
   {
-    name: "Shubh Patel",
-    phone: "+91 98765 43210",
-    photo: "/assets/shubh.jpg",
-    instagram: "https://instagram.com/shubh",
-    linkedin: "https://linkedin.com/in/shubh",
-    github: "https://github.com/shubh",
-    email: "mailto:shubh@example.com",
+    name: "Anand Kumar",
+    phone: "+91 6002115685",
+    photo: "https://res.cloudinary.com/dzeyosnyp/image/upload/v1754632215/WhatsApp_Image_2025-08-08_at_11.17.49_haiu1m.jpg",
+    post:"Founder",
+    linkedin: "https://linkedin.com/in/anand-kumar-b24394224",
+    github: "https://github.com/andinopiss",
+    email: "mailto:beingandinopiss2002@gmail.com",
   },
   {
-    name: "Anand Kumar",
-    phone: "+91 91234 56789",
-    photo: "/assets/aryan.jpg",
-    instagram: "https://instagram.com/aryan",
-    linkedin: "https://linkedin.com/in/aryan",
-    github: "https://github.com/aryan",
-    email: "mailto:aryan@example.com",
+    name: "Shubh Patel",
+    phone: "+91 9638330804",
+    photo: "https://res.cloudinary.com/dzeyosnyp/image/upload/v1754631989/79E81017-67DB-4D11-967B-FF135CBA3458_1_102_o_ztvicd.jpg",
+    post : "Co-Founder",
+    linkedin: "https://linkedin.com/in/shubhnpatel",
+    github: "https://github.com/shubhnpatel",
+    email: "mailto:shubhnpatel@example.com",
   },
 ];
 
@@ -56,10 +56,10 @@ const AboutUs = () => {
                 <h3 className="text-2xl font-semibold text-white">
                   {person.name}
                 </h3>
-                <p className="text-gray-300 mb-4">{person.phone}</p>
+                <p className="text-gray-300 mb-4 font-mono">{person.phone}</p>
+                <p className="text-orange-300 mb-4 text-xl">{person.post}</p>
                 <div className="flex gap-4 text-xl justify-center flex-wrap">
                   {[
-                    { icon: <FaInstagram />, link: person.instagram },
                     { icon: <FaLinkedin />, link: person.linkedin },
                     { icon: <FaGithub />, link: person.github },
                     { icon: <FaEnvelope />, link: person.email },

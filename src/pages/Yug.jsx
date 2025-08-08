@@ -31,14 +31,15 @@ const heroImages = [
 ];
 
 const yugDescriptions = [
-  "Agni Yug represents the age of fire, passion, and transformation. This era ignites courage, purification, and rebirth through inner flame.",
-  "Yantra Yug is the age of machines and innovation, where creation and destruction go hand in hand. Intelligence and invention reign supreme.",
-  "Vayu Yug is the era of movement, speed, and breath. Everything flows with the wind – ideas, energy, and momentum.",
-  "Chhaya Yug brings the shadows, introspection, and mystery. It is the age of the unseen and the subconscious mind.",
-  "Ran Yug is the age of war, strategy, and valor. Strength, conflict, and leadership dominate this time.",
-  "Jal Yug flows with emotion, fluidity, and adaptability. It's a time of healing, connection, and depth.",
-  "Maya Yug is the realm of illusion, spiritual trials, and higher consciousness. What you see is not always what is real.",
+  "Agniyug – Era of Flame and Lost Wisdom\nIn the ashes of Nalanda, fire devours forgotten knowledge. Agniyuga burns with rage and memory, where scrolls scream and temples fall. Arjun, the Flame Monk, rises to reclaim wisdom through fire, wielding chants and flame as his weapons.",
+  "Yantrayug – Era of Machines and Mind Control\nA mythic future ruled by circuitry. Gods have become code. Minds are no longer free. In this world of bronze towers and broken will, Deva-9 awakens — a half-machine, half-mantra prototype fighting to reclaim consciousness itself.",
+  "Vāyuyug – Era of Storms and Shifting Skies\nThe earth is shattered, and the skies have rebelled. Islands drift. Storms rage. In the chaos above, Anaya, the Wind Dancer, flows between lightning and breath, using wind as her blade and sky as her ally.",
+  "Chhāyayug – Era of Shadows and Inverted Light\nHere, even your shadow lies. In a realm trapped in twilight, illusions breathe and reflections deceive. Rudra, the Mirror Blade, hunts fear through broken glass — cutting down nightmares that wear familiar faces.",
+  "Raṇayug – Era of Endless War\nBrothers fight. Kingdoms fall. Time loops in blood and betrayal. Raṇayuga is cursed with battles that never end. Veer, the Exiled Prince, carries a karma-bound spear, striking enemies—and fate itself—with each blow.",
+  "Jalayug – Era of Silence and Memory\nBeneath a glowing ocean, time sleeps. Words are gone. Echoes remain. Meera, the Tide Seeker, dives into sunken temples and forgotten songs, using water and sound to awaken what the world chose to forget.",
+  "Māyayug – Era of Illusion and Broken Truths\nReality slips. Nothing is real — not even you. Māyayuga folds thought into space and dream into stone. Nami, the Rhythmbreaker, dances through madness, bending illusions through movement and memory."
 ];
+
 
 const Yug = () => {
   const totalStages = yugImages.length;
@@ -160,7 +161,7 @@ const Yug = () => {
   `}
 >
   <div className="max-w-xl text-center">
-    <p className="text-white text-base md:text-xl lg:text-2xl font-semibold leading-relaxed backdrop-blur-sm bg-black/40 p-6 rounded-xl shadow-lg transition-all duration-700">
+    <p className="text-white text-base md:text-xl lg:text-xl leading-relaxed backdrop-blur-sm bg-black/40 p-6 rounded-xl shadow-lg transition-all duration-700 font-mono">
       {yugDescriptions[index]}
     </p>
   </div>

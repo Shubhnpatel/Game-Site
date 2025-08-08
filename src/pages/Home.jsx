@@ -1,63 +1,33 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Home = () => {
-  // const [showChakra, setShowChakra] = useState(true);
-  // const [chakraSize, setChakraSize] = useState(560);
   const homeRef = useRef(null);
+  const [displayText, setDisplayText] = useState("");
+  const fullText =
+    "Time is broken. You are the last chance to fix it. Seven eras. Seven heroes. One shattered wheel.";
 
   useEffect(() => {
-    // const handleResize = () => {
-    //   const width = window.innerWidth;
-    //   if (width <= 480) setChakraSize(300);
-    //   else if (width <= 768) setChakraSize(350);
-    //   else setChakraSize(580);
-    // };
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < fullText.length) {
+        setDisplayText((prev) => prev + fullText.charAt(index));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 50); // typing speed in ms
 
-    // const handleScroll = () => {
-    //   if (!homeRef.current) return;
-
-    //   const rect = homeRef.current.getBoundingClientRect();
-    //   const windowHeight = window.innerHeight;
-
-    //   // Show chakra only when Home section is in view
-    //   const inView = rect.top <= 0 && rect.bottom >= windowHeight / 2;
-
-    //   setShowChakra(inView);
-    // };
-
-    // handleResize();
-    // window.addEventListener("resize", handleResize);
-    // window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      // window.removeEventListener("resize", handleResize);
-      // window.removeEventListener("scroll", handleScroll);
-    };
+    return () => clearInterval(interval);
   }, []);
-
-  // const chakraSpinStyle = {
-  //   animation: "chakra-rotate 10s linear infinite",
-  // };
 
   return (
     <>
-      {/* Chakra Spin Keyframes */}
-      {/* <style>
-        {`
-          @keyframes chakra-rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(-360deg); }
-          }
-        `}
-      </style> */}
-
-      {/* Home Section */}
       <div
-        id = "home"
+        id="home"
         ref={homeRef}
-        className="relative min-h-screen w-full flex items-center justify-center text-white px-8 overflow-hidden"
+        className="relative min-h-screen w-full flex items-center justify-center text-white px-6 md:px-8 overflow-hidden"
       >
-        {/* 🔴 Background Video */}
+        {/* Background Video */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           src="https://res.cloudinary.com/dzeyosnyp/video/upload/v1754466840/1754466785742479_cjwnhr.mp4"
@@ -67,32 +37,23 @@ const Home = () => {
           playsInline
         />
 
-        {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold text-center z-10">
-          Welcome to{" "}
-          <span className="text-5xl md:text-6xl text-yellow-400">agnyte</span>
-        </h1>
+        {/* Readability overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60 z-[1]" />
 
-        {/* Chakra Wheel (Commented Out) */}
-        {/* {showChakra && (
-          <div
-            className="fixed z-20 pointer-events-none"
-            style={{
-              top: "50%",
-              right: "750px",
-              transform: "translateY(-50%)",
-              width: `${chakraSize}px`,
-              height: `${chakraSize}px`,
-            }}
-          >
-            <img
-              src="https://res.cloudinary.com/dzeyosnyp/image/upload/v1754465428/5DC4CFB9-70C8-4F4F-BF55-F09D35DD1B10_kdawuu.png"
-              alt="Chakra"
-              className="w-full h-full object-contain"
-              style={chakraSpinStyle}
-            />
+        {/* Centered Text Block */}
+        <div className="relative z-10 max-w-3xl text-center">
+          <div className="backdrop-blur-sm bg-black/40 px-6 py-6 md:px-10 md:py-10 rounded-2xl shadow-lg">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-wide">
+              <span className="text-orange-300">Kalchakra</span> – The Broken Wheel
+            </h1>
+
+            {/* Typing Effect */}
+            <p className="text-sm md:text-lg leading-relaxed mb-4 font-mono min-h-[3rem]">
+              {displayText}
+              <span className="animate-pulse">|</span>
+            </p>
           </div>
-        )} */}
+        </div>
       </div>
     </>
   );
