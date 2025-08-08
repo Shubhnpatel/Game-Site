@@ -6,7 +6,7 @@ const people = [
   {
     name: "Anand Kumar",
     phone: "+91 6002115685",
-    photo: "https://res.cloudinary.com/dzeyosnyp/image/upload/v1754632215/WhatsApp_Image_2025-08-08_at_11.17.49_haiu1m.jpg",
+    photo: "https://res.cloudinary.com/dzeyosnyp/image/upload/v1754634841/WhatsApp_Image_2025-08-08_at_11.17.49-removebg-preview_ylo0os.png",
     post:"Founder",
     linkedin: "https://linkedin.com/in/anand-kumar-b24394224",
     github: "https://github.com/andinopiss",
@@ -15,7 +15,7 @@ const people = [
   {
     name: "Shubh Patel",
     phone: "+91 9638330804",
-    photo: "https://res.cloudinary.com/dzeyosnyp/image/upload/v1754631989/79E81017-67DB-4D11-967B-FF135CBA3458_1_102_o_ztvicd.jpg",
+    photo: "https://res.cloudinary.com/dzeyosnyp/image/upload/v1754634784/79E81017-67DB-4D11-967B-FF135CBA3458_1_102_o-removebg-preview_pdnsur.png",
     post : "Co-Founder",
     linkedin: "https://linkedin.com/in/shubhnpatel",
     github: "https://github.com/shubhnpatel",
