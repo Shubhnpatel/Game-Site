@@ -4,21 +4,21 @@ const Home = () => {
   const homeRef = useRef(null);
   const [displayText, setDisplayText] = useState("");
   const fullText =
-    "Time is broken. You are the last chance to fix it. Seven eras. Seven heroes. One shattered wheel.";
+    "The time is broken. You are the last chance to fix it. Seven eras. Seven heroes. One shattered wheel.";
 
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
-      if (index < fullText.length) {
-        setDisplayText((prev) => prev + fullText.charAt(index));
-        index++;
-      } else {
+      index++;
+      setDisplayText(fullText.slice(0, index));
+      if (index >= fullText.length) {
         clearInterval(interval);
       }
-    }, 50); // typing speed in ms
+    }, 50);
 
     return () => clearInterval(interval);
   }, []);
+
 
   return (
     <>
